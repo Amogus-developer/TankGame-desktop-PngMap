@@ -5,11 +5,10 @@ import com.badlogic.gdx.Input.Keys.*
 import com.badlogic.gdx.InputAdapter
 import com.badlogic.gdx.math.Vector2
 
-class ForceController(private val force: Float = 30F): InputAdapter() {
+class ForceController(private val force: Float = 100F): InputAdapter() {
 
     private val bodyForce = Vector2()
     private val mousePosition = Vector2()
-
     override fun keyDown(keycode: Int): Boolean {
         bodyForce.apply {
             when (keycode) {

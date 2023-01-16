@@ -12,11 +12,16 @@ repositories {
 }
 
 dependencies {
-    testImplementation(kotlin("test"))
-}
+    testImplementation("org.jetbrains.kotlin:kotlin-test:1.7.21")
 
-tasks.test {
-    useJUnitPlatform()
+    implementation("com.badlogicgames.gdx:gdx:1.11.0")
+    implementation("com.badlogicgames.gdx:gdx-box2d:1.11.0")
+    implementation("com.badlogicgames.gdx:gdx-freetype:1.11.0")
+
+    implementation("com.badlogicgames.gdx:gdx-backend-lwjgl3:1.11.0")
+    implementation("com.badlogicgames.gdx:gdx-platform:1.11.0:natives-desktop")
+    implementation("com.badlogicgames.gdx:gdx-box2d-platform:1.11.0:natives-desktop")
+    implementation("com.badlogicgames.gdx:gdx-freetype-platform:1.11.0:natives-desktop")
 }
 
 tasks.withType<KotlinCompile> {
